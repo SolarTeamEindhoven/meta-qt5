@@ -9,11 +9,11 @@ LIC_FILES_CHKSUM = " \
     file://LICENSE.LGPLv3;md5=c1939be5579666be947371bc8120425f \
     file://LGPL_EXCEPTION.txt;md5=0145c4d1b6f96a661c2c139dfb268fb6 \
     file://LICENSE.FDL;md5=6d9f2a9af4c8b8c3c769f6cc1b6aaf7e \
-    file://LICENSE.GPLv2;md5=e782f55badfa137e5e59c330f12cc8ed \
+    file://LICENSE.GPLv2;md5=05832301944453ec79e40ba3c3cfceec \
 "
 
 DEPENDS += "qtdeclarative"
 
 RDEPENDS_${PN}-dev = ""
 
-SRCREV = "4ee79d3eb4baef9e5b2a3d263f002a24184d0e6e"
+SRCREV = "73357afbbe46e660b3497f621505f351b43c5efa"

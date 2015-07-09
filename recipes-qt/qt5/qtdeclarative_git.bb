@@ -16,6 +16,8 @@ SRC_URI += " \
     file://0001-qmltestexample-fix-link.patch \
 "
 
+EXTRA_OEMAKE += "QMAKE_SYNCQT=${STAGING_BINDIR_NATIVE}/${QT_DIR_NAME}/syncqt"
+
 PACKAGECONFIG ??= "qtxmlpatterns"
 PACKAGECONFIG[qtxmlpatterns] = ",,qtxmlpatterns"
 
@@ -27,4 +29,4 @@ do_configure_prepend() {
 
 EXTRA_QMAKEVARS_PRE += "${@base_contains('PACKAGECONFIG', 'qtxmlpatterns', 'CONFIG+=OE_QTXMLPATTERNS_ENABLED', '', d)}"
 
-SRCREV = "db525935ccd64d2c5c674f8a66dbe7096d754e9f"
+SRCREV = "cc0df64bb0e1dea2fe37950816095802f527a241"

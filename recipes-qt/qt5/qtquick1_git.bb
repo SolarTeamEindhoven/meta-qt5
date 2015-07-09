@@ -16,4 +16,4 @@ LIC_FILES_CHKSUM = " \
 DEPENDS += "qtscript qtsvg qtxmlpatterns qtwebkit"
 # qttools
 
-SRCREV = "7bf5bb1a7f54f775534a3d940c44d3bf78725306"
+SRCREV = "eb3c45a5a6a84bd02cac2f5254ef56c3fe2536e8"
