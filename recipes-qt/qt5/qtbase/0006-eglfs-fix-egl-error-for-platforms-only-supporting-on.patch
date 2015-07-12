@@ -35,7 +35,7 @@ index c0d51c9..bb4dc00 100644
      m_flags = Created;
  
 +    static EGLSurface __singleWindowSurface;
-+    if(QEglFSHooks::hooks() && ! QEglFSHooks::hooks()->hasCapability(QPlatformIntegration::MultipleWindows) && (__singleWindowSurface)) {
++    if(!qt_egl_device_integration()->hasCapability(QPlatformIntegration::MultipleWindows) && (__singleWindowSurface)) {
 +        m_surface = __singleWindowSurface;
 +#ifdef QEGL_EXTRA_DEBUG
 +        qWarning("Surface recreate request, re-using %x\n", m_surface);
@@ -59,7 +59,7 @@ index c0d51c9..bb4dc00 100644
  
      resetSurface();
  
-+    if(QEglFSHooks::hooks() && !QEglFSHooks::hooks()->hasCapability(QPlatformIntegration::MultipleWindows))
++    if(!qt_egl_device_integration()->hasCapability(QPlatformIntegration::MultipleWindows))
 +    {
 +        __singleWindowSurface = m_surface;
 +    }
