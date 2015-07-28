@@ -13,13 +13,13 @@ LIC_FILES_CHKSUM = " \
 SRC_URI += "\
     file://0001-Add-linux-oe-g-platform.patch \
     file://0002-qlibraryinfo-allow-to-set-qt.conf-from-the-outside-u.patch \
-    file://0003-qt_module-Fix-pkgconfig-and-libtool-replacements.patch \
     file://0003-Add-external-hostbindir-option.patch \
-    file://0004-qeglplatformintegration-Undefine-CursorShape-from-X..patch \
-    file://0005-configure-bump-path-length-from-256-to-512-character.patch \
-    file://0006-eglfs-fix-egl-error-for-platforms-only-supporting-on.patch \
-    file://0007-QOpenGLPaintDevice-sub-area-support.patch \
-    file://0011-qmake-don-t-build-it-in-configure-but-allow-to-build.patch \
+    file://0004-qt_module-Fix-pkgconfig-and-libtool-replacements.patch \
+    file://0005-qeglplatformintegration-Undefine-CursorShape-from-X..patch \
+    file://0006-configure-bump-path-length-from-256-to-512-character.patch \
+    file://0007-eglfs-fix-egl-error-for-platforms-only-supporting-on.patch \
+    file://0008-QOpenGLPaintDevice-sub-area-support.patch \
+    file://0009-qmake-don-t-build-it-in-configure-but-allow-to-build.patch \
 "
 
 DEPENDS += "qtbase-native"
