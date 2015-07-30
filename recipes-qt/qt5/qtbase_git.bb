@@ -13,12 +13,13 @@ LIC_FILES_CHKSUM = " \
 SRC_URI += "\
     file://0001-Add-linux-oe-g-platform.patch \
     file://0002-qlibraryinfo-allow-to-set-qt.conf-from-the-outside-u.patch \
-    file://0003-qt_module-Fix-pkgconfig-and-libtool-replacements.patch \
-    file://0004-qeglplatformintegration-Undefine-CursorShape-from-X..patch \
-    file://0005-configure-bump-path-length-from-256-to-512-character.patch \
-    file://0006-eglfs-fix-egl-error-for-platforms-only-supporting-on.patch \
-    file://0007-QOpenGLPaintDevice-sub-area-support.patch \
-    file://0014-linux-oe-g-Invert-conditional-for-defining-QT_SOCKLE.patch \
+    file://0003-Add-external-hostbindir-option.patch \
+    file://0004-qt_module-Fix-pkgconfig-and-libtool-replacements.patch \
+    file://0005-qeglplatformintegration-Undefine-CursorShape-from-X..patch \
+    file://0006-configure-bump-path-length-from-256-to-512-character.patch \
+    file://0007-eglfs-fix-egl-error-for-platforms-only-supporting-on.patch \
+    file://0008-QOpenGLPaintDevice-sub-area-support.patch \
+    file://0009-qmake-don-t-build-it-in-configure-but-allow-to-build.patch \
 "
 
 DEPENDS += "qtbase-native"
@@ -188,6 +189,7 @@ do_configure() {
         -testsdir ${OE_QMAKE_PATH_TESTS} \
         -examplesdir ${OE_QMAKE_PATH_EXAMPLES} \
         -hostbindir ${OE_QMAKE_PATH_HOST_BINS} \
+        -external-hostbindir ${OE_QMAKE_PATH_EXTERNAL_HOST_BINS} \
         -hostdatadir ${OE_QMAKE_PATH_HOST_DATA} \
         -platform ${OE_QMAKESPEC} \
         -xplatform linux-oe-g++ \
@@ -260,4 +262,4 @@ sysroot_stage_dirs_append() {
     rm -rf $to${OE_QMAKE_PATH_LIBS}/fonts
 }
 
-SRCREV = "069be1654359ab93f89d339775795508d106153a"
+SRCREV = "2fde9f59eeab68ede92324e7613daf8be3eaf498"
