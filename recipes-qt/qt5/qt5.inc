@@ -52,9 +52,11 @@ FILES_${PN}-qmlplugins-dbg = " \
     ${OE_QMAKE_PATH_QML}/*/.debug \
     ${OE_QMAKE_PATH_QML}/*/*/.debug \
     ${OE_QMAKE_PATH_QML}/*/*/*/.debug \
+    ${OE_QMAKE_PATH_QML}/*/*/*/*/.debug \
     ${OE_QMAKE_PATH_IMPORTS}/*/.debug \
     ${OE_QMAKE_PATH_IMPORTS}/*/*/.debug \
     ${OE_QMAKE_PATH_IMPORTS}/*/*/*/.debug \
+    ${OE_QMAKE_PATH_IMPORTS}/*/*/*/*/.debug \
 "
 FILES_${PN}-tools-dbg = " \
     ${OE_QMAKE_PATH_BINS}/.debug \
@@ -63,6 +65,7 @@ FILES_${PN}-plugins-dbg = " \
     ${OE_QMAKE_PATH_PLUGINS}/*/.debug/* \
     ${OE_QMAKE_PATH_PLUGINS}/*/*/.debug/* \
     ${OE_QMAKE_PATH_PLUGINS}/*/*/*/.debug/* \
+    ${OE_QMAKE_PATH_PLUGINS}/*/*/*/*/.debug/* \
 "
 
 # extra packages
@@ -89,6 +92,11 @@ FILES_${PN}-qmlplugins = " \
     ${OE_QMAKE_PATH_QML}/*/*/*/*/*.qmltypes \
     ${OE_QMAKE_PATH_QML}/*/*/*/*/*.qml \
     ${OE_QMAKE_PATH_QML}/*/*/*/*/*.js \
+    ${OE_QMAKE_PATH_QML}/*/*/*/*/*.png \
+    ${OE_QMAKE_PATH_QML}/*/*/*/*/*/qmldir \
+    ${OE_QMAKE_PATH_QML}/*/*/*/*/*/*.qmltypes \
+    ${OE_QMAKE_PATH_QML}/*/*/*/*/*/*.qml \
+    ${OE_QMAKE_PATH_QML}/*/*/*/*/*/*.js \
     ${OE_QMAKE_PATH_QML}/*/*/*/*/*/*.png \
     ${OE_QMAKE_PATH_IMPORTS}/*.qmltypes \
     ${OE_QMAKE_PATH_IMPORTS}/*/*${SOLIBSDEV} \
@@ -126,6 +134,10 @@ FILES_${PN}-dev += " \
     ${OE_QMAKE_PATH_LIBS}/*.prl \
     ${OE_QMAKE_PATH_LIBS}/*.la \
     ${OE_QMAKE_PATH_HEADERS}/* \
+    ${OE_QMAKE_PATH_QML}/*.metainfo \
+    ${OE_QMAKE_PATH_QML}/*/*.metainfo \
+    ${OE_QMAKE_PATH_QML}/*/*/*.metainfo \
+    ${OE_QMAKE_PATH_QML}/*/*/*/*.metainfo \
 "
 FILES_${PN}-dbg += " \
     ${OE_QMAKE_PATH_LIBS}/.debug \
