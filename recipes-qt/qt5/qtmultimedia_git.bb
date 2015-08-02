@@ -30,8 +30,4 @@ EXTRA_QMAKEVARS_PRE += "${@bb.utils.contains('PACKAGECONFIG', 'gstreamer010', 'G
 # Disable GStreamer if completely disabled
 EXTRA_QMAKEVARS_PRE += "${@bb.utils.contains_any('PACKAGECONFIG', 'gstreamer gstreamer010', '', 'CONFIG+=done_config_gstreamer', d)}"
 
-SRC_URI += "\
-    file://0001-Initial-porting-effort-to-GStreamer-1.0.patch \
-"
-
 SRCREV = "3f15c1b17e55b5b118d11621f85fa74f7cc74ae6"
