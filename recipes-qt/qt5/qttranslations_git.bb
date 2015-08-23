@@ -27,6 +27,7 @@ PACKAGES =. " \
     ${PN}-qtbase \
     ${PN}-qthelp \
     ${PN}-qt \
+    ${PN}-qtwebsockets \
 "
 
 FILES_${PN}-assistant = " \
@@ -91,6 +92,10 @@ FILES_${PN}-qthelp = " \
 
 FILES_${PN}-qt = " \
     ${OE_QMAKE_PATH_TRANSLATIONS}/qt_*.qm \
+"
+
+FILES_${PN}-qtwebsockets = " \
+    ${OE_QMAKE_PATH_TRANSLATIONS}/qtwebsockets_*.qm \
 "
 
 SRCREV = "5e65c6fcdbbc75040426c8239c686f7b1ea689fd"
